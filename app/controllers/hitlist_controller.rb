@@ -1,0 +1,2 @@
+class HitlistController < ApplicationController
+end
