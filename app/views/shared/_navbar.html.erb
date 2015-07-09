@@ -1,1 +1,18 @@
-Home | Restaurants | My Account
+<%= link_to "Home", root_path %> | Restaurants | 
+
+       
+<header id="header">
+	<h1><a href="javascript:px.iframeLocation('iframe', 'index.html');" class="icon fa-tint"><%= link_to "Palate", root_path %></a></h1>
+	<nav id="nav">
+		<ul>
+			<% if user_signed_in? %>
+                 <span>Welcome, <%= link_to(current_user.email, user_path(current_user)) %>! |  <%= link_to "signout", destroy_user_session_path, method: :delete %></span>
+                 <% else %>
+                 <%= link_to "Sign in", new_user_session_path %> 
+        	<% end %>
+	
+		</ul>
+	</nav>
+</header>
+
+<br>

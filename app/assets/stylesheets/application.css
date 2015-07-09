@@ -13,3 +13,39 @@
  *= require_tree .
  *= require_self
  */
+
+.jumbotron {
+	height: 591px;
+	background-color: white;
+	background-image: url("http://herringboneeats.com/assets/images/responsive/HERR_Food_Sandwich-1200px.jpg");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+#rest-card {
+	border: 2px solid black;
+	padding: 20px;
+	/*margin: 5px;*/
+	/*background: rgba(29, 39, 38, 0.7);*/
+}
+
+.rest-image {
+	width: 100%;
+	height: 100%;
+}
+
+#intro-container {
+  background: rgba(29, 39, 38, 0.9);
+  padding: 3.5em 5em;
+  position: relative;
+  z-index: 2;
+}
+
+#login-container {
+	width: 50%;
+}
+
+#hello {
+	color: white;
+}
