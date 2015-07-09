@@ -1,8 +1,17 @@
+<%= render "shared/navbar" %>
+<br>
+<br>
 
-<% @restaurants.each do |restaurant| %>
+<div class="container">
 
-	<h2> <%= restaurant.name %> </h2>
-	<i><%= restaurant.city %></i> <br>
-	Cuisine: <%= restaurant.cuisine %>
+	<% @restaurants.each do |restaurant| %>
+		<div class="col-md-4" id="rest-card">
+			<%= image_tag "http://i364.photobucket.com/albums/oo85/exile_kiss/2010_04_Apr/10_04_11_Burger_Crawl_038a.jpg", {class: "rest-image"} %>
+			<h2> <%= restaurant.name %> </h2>
+			<i><%= restaurant.city %></i> <br>
+			Cuisine: <%= restaurant.cuisine %>
+		</div>
+	<% end %>
 
-<% end %>
+
+</div>
