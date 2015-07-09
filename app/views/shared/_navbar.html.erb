@@ -1,1 +1,7 @@
-Home | Restaurants | My Account | <%= link_to "Sign in", new_user_session_path %> | <%= link_to "signout", destroy_user_session_path, method: :delete %> | <%= link_to "Create Account", new_user_registration_path %>
+<%= link_to "Home", root_path %> | Restaurants | 
+
+       <% if user_signed_in? %>
+                 <span>Welcome, <%= link_to(current_user.email, user_path(current_user)) %>! |  <%= link_to "signout", destroy_user_session_path, method: :delete %></span>
+                 <% else %>
+                 <%= link_to "Sign in", new_user_session_path %> |  | <%= link_to "Create Account", new_user_registration_path %> 
+        <% end %>
