@@ -1,15 +1,16 @@
 <%= link_to "Home", root_path %> | Restaurants | 
 
-       <% if user_signed_in? %>
-                 <span>Welcome, <%= link_to(current_user.email, user_path(current_user)) %>! |  <%= link_to "signout", destroy_user_session_path, method: :delete %></span>
-                 <% else %>
-                 <%= link_to "Sign in", new_user_session_path %> |  | <%= link_to "Create Account", new_user_registration_path %> 
-        <% end %>
+       
 <header id="header">
-	<h1><a href="javascript:px.iframeLocation('iframe', 'index.html');" class="icon fa-tint">Palate</a></h1>
+	<h1><a href="javascript:px.iframeLocation('iframe', 'index.html');" class="icon fa-tint"><%= link_to "Palate", root_path %></a></h1>
 	<nav id="nav">
 		<ul>
-			<li style="white-space: nowrap;"><a href="javascript:px.iframeLocation('iframe', 'index.html');">Signin</a></li>
+			<% if user_signed_in? %>
+                 <span>Welcome, <%= link_to(current_user.email, user_path(current_user)) %>! |  <%= link_to "signout", destroy_user_session_path, method: :delete %></span>
+                 <% else %>
+                 <%= link_to "Sign in", new_user_session_path %> 
+        	<% end %>
+	
 		</ul>
 	</nav>
 </header>

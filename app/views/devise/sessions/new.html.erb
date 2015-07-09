@@ -1,11 +1,15 @@
-<h2>Log in</h2>
+<br>
+<br>
 
+<div class="container" id="login-container">
+
+<h2>Welcome Back</h2>
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true %>
   </div>
-
+  <br>
   <div class="field">
     <%= f.label :password %><br />
     <%= f.password_field :password, autocomplete: "off" %>
@@ -24,3 +28,5 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+
+</div>
