@@ -7,9 +7,11 @@ class HitlistController < ApplicationController
 	end
 
 	def new
+		@hitlist = Hitlist.all
 	end
 
 	def create
+        @hitlist = Hitlist.new(params.require(:hitlist).permit(:name, :description))
 	end
 
 	def update

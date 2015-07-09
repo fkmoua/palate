@@ -1,0 +1,17 @@
+<%= render "shared/navbar" %>
+
+<%= form_for @hitlist do |f| %>
+
+	<div>
+    <%= f.label :name %>
+    <%= f.text_field :name%>
+    </div>
+
+    <div>
+    <%= f.label :description %>
+    <%= f.text_area :description%>
+    </div>
+
+     <%= f.submit "Add Hitlist" %>
+
+<% end %> 
