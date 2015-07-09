@@ -13,3 +13,19 @@
  *= require_tree .
  *= require_self
  */
+
+.jumbotron {
+	height: 591px;
+	background-color: white;
+	background-image: url("http://herringboneeats.com/assets/images/responsive/HERR_Food_Sandwich-1200px.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.intro-container {
+	height: 300px;
+	width: 300px;
+	background-color: red;
+	opacity: 0.5;
+	margin-left: 500px;
+}

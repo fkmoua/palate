@@ -1,17 +1,19 @@
 <%= render "shared/navbar" %>
 
-<%= form_for @hitlist do |f| %>
-
-	<div>
-    <%= f.label :name %>
-    <%= f.text_field :name%>
+<%= form_for [@user,@hitlist] do |f| %>
+    
+    <h2> Resource </h2>
+    <div>
+        <%= f.label :name %>
+        <%= f.text_field :name %>
     </div>
+
 
     <div>
-    <%= f.label :description %>
-    <%= f.text_area :description%>
+        <%= f.label :description %>
+        <%= f.text_field :description%>
     </div>
 
-     <%= f.submit "Add Hitlist" %>
+    <%= f.submit "Create new list" %>
 
-<% end %> 
+<% end %>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150708211540) do
+ActiveRecord::Schema.define(version: 20150709052633) do
 
   create_table "hitlists", force: :cascade do |t|
     t.string   "name"
