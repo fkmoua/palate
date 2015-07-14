@@ -1,5 +1,9 @@
 <%= render "shared/navbar" %>
 
+<br>
+<br>
+
+<div class="container">
 <%= form_for [@user,@hitlist] do |f| %>
     
     <h2> Resource </h2>
@@ -17,3 +21,5 @@
     <%= f.submit "Create new list" %>
 
 <% end %>
+
+</div>

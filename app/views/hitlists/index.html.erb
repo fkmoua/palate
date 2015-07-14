@@ -1,0 +1,16 @@
+<%= render "shared/navbar" %>
+
+<br>
+<br>
+
+<div class="container" id="hitlist-index">
+
+	<% @hitlists.each do |hitlist| %>
+
+		<h2> <%= hitlist.name %> <br> </h2>
+		<i><%= hitlist.description %></i>
+
+	<% end %>
+	
+
+</div>

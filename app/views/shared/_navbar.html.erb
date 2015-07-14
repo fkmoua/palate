@@ -6,7 +6,7 @@
 	<nav id="nav">
 		<ul>
 			<% if user_signed_in? %>
-                 <span>Welcome, <%= link_to(current_user.email, user_path(current_user)) %>! |  <%= link_to "signout", destroy_user_session_path, method: :delete %></span>
+                 <span>Welcome, <%= link_to(current_user.name, user_path(current_user)) %>! |  <%= link_to "signout", destroy_user_session_path, method: :delete %></span>
                  <% else %>
                  <%= link_to "Sign in", new_user_session_path %> 
         	<% end %>

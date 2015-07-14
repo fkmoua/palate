@@ -6,7 +6,22 @@
 	<h3><%= @user.email %></h3>
 
 	<br>
+
+	<% @hitlists.each do |hitlist| %>
+		<div id="hitlist-index">
+			<h2> <%= hitlist.name %> <br> </h2>
+			<i><%= hitlist.description %></i>
+		</div>
+		<br>
+	<% end %>
+	
+
+	<br>
+
+	<%= link_to("New Hitlist", new_user_hitlist_path(current_user))%>
 </div>
+
+
 
 
 <%#= link_to "new list", new_user_hitlist_path %>
