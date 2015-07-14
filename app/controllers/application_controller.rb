@@ -8,10 +8,10 @@ class ApplicationController < ActionController::Base
   	user_path(current_user)
   end
 
-
   protected
 
   def configure_permitted_parameters
     devise_parameter_sanitizer.for(:sign_up) << :name
   end
+
 end
